@@ -19,7 +19,8 @@ form.addEventListener("submit", async (event) => {
       headers: {
         "Content-Type": "application/json",
         // En un caso real, aquí iría la autenticación del usuario
-        Authorization: "Bearer <tu_supabase_anon_key>",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5haG9meGpmd2Z2aGF3eXhubmp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNDE0MzcsImV4cCI6MjA3NjgxNzQzN30.Zx50xO0cmJKMPpgJ__JnEn_MPwzStZpLV1iqTy_tLFA",
       },
       body: JSON.stringify(data),
     });
