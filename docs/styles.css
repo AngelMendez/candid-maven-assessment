@@ -132,24 +132,59 @@ select option {
 
 .response-message {
     margin-top: 24px;
-    padding: 12px 16px;
+    padding: 16px 20px;
     border-radius: 8px;
     font-size: 14px;
+    font-weight: 500;
     display: none;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.response-message::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .response-message.success {
-    display: block;
-    background: #1a2e1a;
-    border: 1px solid #2d4a2d;
+    display: flex;
+    background: linear-gradient(135deg, #1a2e1a 0%, #1f3a1f 100%);
+    border: 1px solid #3d5a3d;
     color: #86efac;
+    box-shadow: 0 4px 12px rgba(26, 46, 26, 0.4);
+}
+
+.response-message.success::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9' stroke='%2386efac' stroke-width='2'/%3E%3Cpath d='M6 10L9 13L14 7' stroke='%2386efac' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .response-message.error {
-    display: block;
-    background: #2e1a1a;
-    border: 1px solid #4a2d2d;
+    display: flex;
+    background: linear-gradient(135deg, #2e1a1a 0%, #3a1f1f 100%);
+    border: 1px solid #5a3d3d;
     color: #fca5a5;
+    box-shadow: 0 4px 12px rgba(46, 26, 26, 0.4);
+}
+
+.response-message.error::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='9' stroke='%23fca5a5' stroke-width='2'/%3E%3Cpath d='M10 6V11' stroke='%23fca5a5' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='10' cy='14' r='0.5' fill='%23fca5a5' stroke='%23fca5a5'/%3E%3C/svg%3E");
 }
 
 /* Responsive design */

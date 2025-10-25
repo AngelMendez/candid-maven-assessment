@@ -19,7 +19,7 @@ form.addEventListener("submit", async (event) => {
   btnText.style.display = "none";
   btnLoader.style.display = "inline-block";
   responseMessage.className = "response-message";
-  responseMessage.style.display = "none";
+  responseMessage.textContent = "";
 
   try {
     const response = await fetch(SUPABASE_FUNCTION_URL, {
