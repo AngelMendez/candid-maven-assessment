@@ -97,7 +97,7 @@ Use a tool like cURL or Postman to send requests to the local function URLs (e.g
 
 Artificial intelligence was used as a productivity accelerator throughout the development process, primarily for generating boilerplate code and test cases. All AI-generated output was manually reviewed, validated, and refactored to fit the project's specific architectural and security needs.
 
-**Tools Used**: Google Gemini
+**Tools Used**: Google Gemini & Claude Code
 
 ### Prompts & Use Cases
 
